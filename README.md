@@ -82,7 +82,9 @@ names. The lead reads the summary, not a transcript.
   of the conversation.
 - **Desktop notifications.** A macOS banner when Claude Code needs a
   permission decision or the lead needs you, titled with the repo it came from.
-  Idle nags are suppressed.
+  On iTerm2 and Ghostty, clicking it switches to the session that raised it;
+  the terminal has to be allowed to post notifications, which macOS asks
+  about the first time. Idle nags are suppressed.
 - **No idle sleep.** Your Mac stays awake for the life of the session, so
   unattended work is not cut in half by the lid closing.
 
@@ -119,6 +121,10 @@ change it later from `/plugin`.
 `auto_pr` (default on) lets the lead push and open the draft pull request at
 Gate 2 without asking. Turn it off and the lead presents the branch and waits
 for your word.
+
+`notifications` (default on) controls the desktop banner. Turn it off and the
+Notification hook exits before doing anything; nothing else foreman does
+changes.
 
 Roles cannot be customised per user in this version; the lead dispatches the
 plugin's own `foreman:<role>` agents. Per-role overrides are on the list for a

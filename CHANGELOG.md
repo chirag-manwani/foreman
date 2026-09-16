@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased
+
+Clicking the banner goes back to the session that raised it. On iTerm2 and
+Ghostty the notification is posted by the terminal itself, which attributes it
+to the tab or split that wrote it; the osascript banner belongs to Script
+Editor, so clicking it opened Script Editor and left you to find the window
+yourself. The terminal has to be allowed to post notifications, and the sound
+is whatever it is set to. Other terminals, and tmux or screen inside either,
+get the osascript banner as before. Control characters are removed from the message and the repo name on
+every path; accented and non-Latin text is kept.
+
 ## 0.3.2
 
 The banner names the repo it came from: the title is now `Claude Code — <dir>`,
